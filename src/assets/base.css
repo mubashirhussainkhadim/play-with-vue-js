@@ -1,0 +1,86 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --vt-c-white: #f5f3ff; /* Light Lavender */
+  --vt-c-white-soft: #ede9fe; /* Soft Purple */
+  --vt-c-white-mute: #e0e7ff; /* Mute Lavender */
+
+  --vt-c-black: #3c1e70; /* Dark Purple */
+  --vt-c-black-soft: #4b306f; /* Softer Dark Purple */
+  --vt-c-black-mute: #5a3f89; /* Mute Dark Purple */
+
+  --vt-c-indigo: #6c3dc5; /* Primary Purple */
+
+  --vt-c-divider-light-1: rgba(108, 61, 197, 0.29); /* Light Divider Purple */
+  --vt-c-divider-light-2: rgba(108, 61, 197, 0.12); /* Lighter Divider Purple */
+  --vt-c-divider-dark-1: rgba(92, 50, 138, 0.65); /* Dark Divider Purple */
+  --vt-c-divider-dark-2: rgba(92, 50, 138, 0.48); /* Darker Divider Purple */
+
+  --vt-c-text-light-1: var(--vt-c-indigo); /* Text Color Light Purple */
+  --vt-c-text-light-2: rgba(108, 61, 197, 0.66); /* Muted Light Text */
+  --vt-c-text-dark-1: var(--vt-c-white); /* Dark Mode Text Color */
+  --vt-c-text-dark-2: rgba(240, 240, 250, 0.64); /* Muted Dark Text */
+}
+
+/* semantic color variables for this project */
+:root {
+  --color-background: var(--vt-c-white);
+  --color-background-soft: var(--vt-c-white-soft);
+  --color-background-mute: var(--vt-c-white-mute);
+
+  --color-border: var(--vt-c-divider-light-2);
+  --color-border-hover: var(--vt-c-divider-light-1);
+
+  --color-heading: var(--vt-c-text-light-1);
+  --color-text: var(--vt-c-text-light-1);
+
+  --section-gap: 160px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--vt-c-black);
+    --color-background-soft: var(--vt-c-black-soft);
+    --color-background-mute: var(--vt-c-black-mute);
+
+    --color-border: var(--vt-c-divider-dark-2);
+    --color-border-hover: var(--vt-c-divider-dark-1);
+
+    --color-heading: var(--vt-c-text-dark-1);
+    --color-text: var(--vt-c-text-dark-2);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+  line-height: 1.6;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
